@@ -42,3 +42,12 @@ body{
     font-size: 40px;
 }
 
+button {
+    padding: 7px;
+    color: white;
+    background-color: rgb(138, 66, 116);
+}
+button:hover{
+    background-color: rgb(132, 163, 47);
+}
+

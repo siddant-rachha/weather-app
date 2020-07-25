@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
                 temperatureDegree.textContent = (temperature-273.15).toFixed(1);
                 temperatureDescription.textContent = summary.toUpperCase();
                 locationTimezone.textContent = `${location}, ${country}`;
-                img.innerHTML = `<img src="${iconId}.png"></div>`
+                img.innerHTML = `<img src="icons/${iconId}.png"></div>`
 
                 degreeSection.addEventListener('click', ()=>{
                     if(degreeSectionSpan.textContent === 'C'){

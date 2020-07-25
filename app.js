@@ -1,4 +1,4 @@
-window.addEventListener('load', ()={
+window.addEventListener('load', (event)={
     let long;
     let lat;
     let temperatureDegree = document.querySelector('.temperature-degree')

@@ -1,4 +1,4 @@
-func = () => {
+
     let long;
     let lat;
     let temperatureDegree = document.querySelector('.temperature-degree')
@@ -48,7 +48,7 @@ func = () => {
         });
     }
 
-}
+
 
 
 

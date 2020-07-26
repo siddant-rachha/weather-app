@@ -14,41 +14,48 @@ const position = (position) => {
     const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=75a8d594b0a2141b02960e6f1bdfe36a`;
     fetch(api).then(response => {
         return response.json();
-    }).then(response=>{
+    }).then(response => {
         let temperature = response.main.temp;
         let summary = response.weather[0].description;
         let location = response.name
         let country = response.sys.country
         let iconId = response.weather[0].icon
 
-        temperatureDegree.textContent = (temperature-273.15).toFixed(1);
+        temperatureDegree.textContent = (temperature - 273.15).toFixed(1);
         temperatureDescription.textContent = summary.toUpperCase();
         locationTimezone.textContent = `${location}, ${country}`;
         img.innerHTML = `<img src="icons/${iconId}.png"></div>`
 
-        buttonDiv.addEventListener('click', ()=>{
-            if(degreeSectionSpan.textContent === '°C'){
+        alert('Weather data fetched');
+
+        buttonDiv.addEventListener('click', () => {
+            if (degreeSectionSpan.textContent === '°C') {
                 degreeSectionSpan.textContent = '°F'
-                temperatureDegree.textContent = (((temperature-273.15) * 9/5)+32).toFixed(1)
+                temperatureDegree.textContent = (((temperature - 273.15) * 9 / 5) + 32).toFixed(1)
             }
-            else{
+            else {
                 degreeSectionSpan.textContent = '°C'
-                temperatureDegree.textContent = (temperature-273.15).toFixed(1)
+                temperatureDegree.textContent = (temperature - 273.15).toFixed(1)
             }
 
-    });
+        });
 
     });
 }
 
 error = (error) => {
-    alert(`${error.message}`)
+    if (error.message === 'User denied Geolocation') {
+        alert (`Unblock location permission, click (Green Padlock) => (Site setting) => (Clear & Reset)`)
+    }
+    else {
+        alert(`${error.message}`)
+    }
 }
 
-const weather = () =>{
+const weather = () => {
 
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(position,error);
+        navigator.geolocation.getCurrentPosition(position, error);
         buttonDiv.innerHTML = `<button class='button-change'><i class='fas fa-sync'></i></button>`
     }
 

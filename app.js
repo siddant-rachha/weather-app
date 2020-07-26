@@ -6,11 +6,7 @@ let locationTimezone = document.querySelector('.location-timezone')
 let img = document.querySelector('.img')
 let degreeSection = document.querySelector('.degree-section')
 let degreeSectionSpan = document.querySelector('.degree-section span')
-let options = {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0
-  };
+let buttonDiv = document.querySelector('.button-div')
 
 const position = (position) => {
     long = position.coords.longitude;
@@ -31,12 +27,12 @@ const position = (position) => {
         img.innerHTML = `<img src="icons/${iconId}.png"></div>`
 
         degreeSection.addEventListener('click', ()=>{
-            if(degreeSectionSpan.textContent === 'C'){
-                degreeSectionSpan.textContent = 'F'
+            if(degreeSectionSpan.textContent === '°C'){
+                degreeSectionSpan.textContent = '°F'
                 temperatureDegree.textContent = (((temperature-273.15) * 9/5)+32).toFixed(1)
             }
             else{
-                degreeSectionSpan.textContent = 'C'
+                degreeSectionSpan.textContent = '°C'
                 temperatureDegree.textContent = (temperature-273.15).toFixed(1)
             }
 
@@ -49,14 +45,14 @@ error = (error) => {
     alert(`${error.message}`)
 }
 
-
-window.addEventListener( "load", () =>{
+const weather = () =>{
 
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(position,error,options);
+        navigator.geolocation.getCurrentPosition(position,error);
+        buttonDiv.innerHTML = `<button class='button-change'><i class='fas fa-sync'></i></button>`
     }
 
-});
+};
 
 
 

@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather-App</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
-<body>
-    <div class="location">
-        <h1 class="location-timezone">?</h1>
-        <div class='img'>
-        <img>?</div>
-    </div>
-    <div class="temperature">
-        <div class="degree-section">
-            <h2 class="temperature-degree"></h2>
-            <span>C</span>
-        </div>
-        
-        <div class="temperature-description">enable location first, and refresh...</div>
-    </div>
 
+<body>
+    <div class="container">
+        <h1 style="color: tomato;">Weather Data</h1>
+        <div class="location">
+            <h2 class="location-timezone">City...</h2>
+            <div class='img'>Icon...</div>
+        </div>
+        <div class="temperature">
+            <strong>
+                <div class="degree-section">
+                    <h2 class="temperature-degree"></h2>
+                    <span>°C</span>
+                    <div class='button-div'></div>
+                </div>
+            </strong>
+            <strong>
+                <div class="temperature-description">
+                    description...</div>
+            </strong>
+        </div>
+        <button onclick=weather() class="button-load">Load weather data</button>
+    </div>
 </body>
 <script src="app.js"></script>
+
 </html>

@@ -107,6 +107,7 @@ body{
     transition: 0.3s;
     text-decoration: none;
     border-radius: 6px;
+    border: none;
   }
   
   .button-load:hover, .button-change:hover {opacity: 1}

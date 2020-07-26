@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Patrick Hand', cursive, sans-serif;
 }
 
 body{
@@ -11,15 +12,13 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: white;
-    animation: color-me-in 15s infinite; /* other keywords like "infinite alternate" can be useful here */
-    font-family: sans-serif;
+    animation: color-me-in 15s infinite; 
 }
 
 @keyframes color-me-in {
     0% {
       background: rgba(255, 255, 255, 0.5);
     }
-    /* Adding a step in the middle */
     14.28% {
       background: rgba(255, 0, 0, 0.5);
     }
@@ -70,7 +69,6 @@ body{
 }
 .degree-section{
     display: flex;
-    flex-direction: row;
     align-items: center;
     cursor: pointer;
 }
@@ -89,7 +87,6 @@ body{
     border-radius: 4px;
     opacity: 0.6;
     transition: 0.3s;
-    text-decoration: none;
     cursor: pointer;
 }
 
@@ -103,10 +100,8 @@ body{
     margin: 4px 2px;
     opacity: 0.6;
     transition: 0.3s;
-    display: inline-block;
-    text-decoration: none;
     border-radius: 6px;
   }
   
-  .button-load:hover, .button-change:hover {opacity: 1}
+.button-load:hover, .button-change:hover {opacity: 1}
 

@@ -1,4 +1,4 @@
-window.addEventListener('load', (event)={
+window.addEventListener( "load", () =>{
     let long;
     let lat;
     let temperatureDegree = document.querySelector('.temperature-degree')
@@ -42,13 +42,13 @@ window.addEventListener('load', (event)={
                         temperatureDegree.textContent = (temperature-273.15).toFixed(1)
                     }
 
-            })
+            });
 
             });
         });
     }
 
-})
+});
 
 
 

@@ -17,32 +17,29 @@ body{
 
 @keyframes color-me-in {
     0% {
-      background: white;
+      background: rgba(255, 255, 255, 0.5);
     }
     /* Adding a step in the middle */
-    12.5% {
-      background: red;
+    14.28% {
+      background: rgba(255, 0, 0, 0.5);
     }
-    25% {
-      background: orange;
+    28.56% {
+      background: rgba(255, 127, 0, 0.5);
     }
-      37.5% {
-      background: yellow;
+      42.84% {
+      background: rgba(255, 255, 0, 0.5);
     }
-      50% {
-      background: green;
+      57.12% {
+      background: rgba(0, 255, 0, 0.5);
     }
-      62.5% {
-      background: cyan;
+      71.4% {
+      background: rgba(0, 0, 255, 0.5);
     }
-      75% {
-      background: sky;
-    }
-      87.5% {
-      background: blue;
+      85.68% {
+      background: rgb(75,0,130,0.5);
     }
       100% {
-      background: indigo;
+      background: rgba(148, 0, 211, 0.5);
     }
   }
   
@@ -98,6 +95,7 @@ body{
 
 .button-load {
     background-color: #f4511e;
+    border: none;
     color: white;
     padding: 16px 32px;
     text-align: center;
@@ -105,9 +103,9 @@ body{
     margin: 4px 2px;
     opacity: 0.6;
     transition: 0.3s;
+    display: inline-block;
     text-decoration: none;
     border-radius: 6px;
-    border: none;
   }
   
   .button-load:hover, .button-change:hover {opacity: 1}

@@ -6,7 +6,11 @@ let locationTimezone = document.querySelector('.location-timezone')
 let img = document.querySelector('.img')
 let degreeSection = document.querySelector('.degree-section')
 let degreeSectionSpan = document.querySelector('.degree-section span')
-
+let options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+  };
 
 const position = (position) => {
     long = position.coords.longitude;
@@ -49,7 +53,7 @@ error = (error) => {
 window.addEventListener( "load", () =>{
 
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(position,error);
+        navigator.geolocation.getCurrentPosition(position,error,options);
     }
 
 });

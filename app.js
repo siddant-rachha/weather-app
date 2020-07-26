@@ -26,7 +26,7 @@ const position = (position) => {
         locationTimezone.textContent = `${location}, ${country}`;
         img.innerHTML = `<img src="icons/${iconId}.png"></div>`
 
-        degreeSection.addEventListener('click', ()=>{
+        buttonDiv.addEventListener('click', ()=>{
             if(degreeSectionSpan.textContent === '°C'){
                 degreeSectionSpan.textContent = '°F'
                 temperatureDegree.textContent = (((temperature-273.15) * 9/5)+32).toFixed(1)
